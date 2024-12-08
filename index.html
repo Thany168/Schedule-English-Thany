@@ -6,44 +6,49 @@
     <title>Schedule of Daily Activity</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 20px;
-        }
-        th, td {
-            border: 1px solid #000;
-            padding: 10px;
-            text-align: center;
-        }
-        th {
-            background-color: #f2f2f2;
-        }
-        .section-title {
-            text-align: left;
-            font-weight: bold;
-            font-size: 18px;
-            margin-top: 20px;
-        }
-        .date-input {
-            width: 150px;
-            margin-top: 10px;
-        }
-    </style>
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-    <center>
-        <h2 class="bg-dark text-light">My Daily Routine</h2>
-    </center>
-
-    <div class="section-title"><center>1. Morning </center></div>
-    <table class="table table-hover">
-        <tr class="table table-dark table-striped">
+    <nav class="navbar bg-body-tertiary fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Daily Routine's <i>Thany</i></a>
+            <div class="d-flex align-items-center">
+                <a href="./khmer.html" class="btn btn-primary">Khmer</a>
+                <button style="border: none; outline: none;" class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+            </div>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Daily Schedule</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#Morning Shift">Morning Shift</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#Afternoon Shift">Afternoon Shift</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#Night Shift">Night Shift</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex mt-3" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container w-100 " style="margin-top: 5rem;">
+    <div id="#Morning Shift" class="section-title"><center>1. Morning </center></div>
+    <table class="table table-dark table-striped table-hover">
+        <tr>
             <th>Hours</th>
             <th>Monday</th>
             <th>Tuesday</th>
@@ -61,7 +66,7 @@
             <td>Shower</td>
             <td>Shower</td>
             <td>Shower</td>
-            <td>Shower</td>
+            <td>-</td>
         </tr>
         <tr>
             <td>07:30AM - 07:45AM</td>
@@ -71,7 +76,7 @@
             <td>Commute</td>
             <td>Commute</td>
             <td>Commute</td>
-            <td>Commute</td>
+            <td>-</td>
         </tr>
         <tr>
             <td>7:45AM - 08:00AM</td>
@@ -81,7 +86,7 @@
             <td>Breakfast</td>
             <td>Breakfast</td>
             <td>Breakfast</td>
-            <td>Breakfast</td>
+            <td>-</td>
         </tr>
         <tr>
             <td>08:00AM - 12:00PM</td>
@@ -91,13 +96,13 @@
             <td>Work</td>
             <td>Work</td>
             <td>Work</td>
-            <td>Work</td>
+            <td>-</td>
         </tr>
     </table>
 
-    <div class="section-title"><center>2. Afternoon</center></div>
-    <table>
-        <tr class="table table-dark table-striped text-dark">
+    <div id="#Afternoon Shift" class="section-title"><center>2. Afternoon</center></div>
+    <table class="table table-dark table-striped table-hover">
+        <tr>
             <th>Hours</th>
             <th>Monday</th>
             <th>Tuesday</th>
@@ -159,11 +164,11 @@
         </tr>
       
     </table>
-    <div class="section-title">
+    <div id="#Night Shift" class="section-title">
         <center>3. Night </center>
     </div>
-    <table>
-        <tr class="table table-dark table-hover">
+    <table class="table table-dark table-striped table-hover">
+        <tr >
             <th>Hours</th>
             <th>Monday</th>
             <th>Tuesday</th>
@@ -198,5 +203,7 @@
     <div class="section-title">Notes:</div>
     <input type="text" class="date-input form-control w-25 " placeholder="Enter text note">
     <button class="btn btn-outline-primary mt-2">Add Calendar +</button>
+</div>
 </body>
+<script></script>
 </html>
